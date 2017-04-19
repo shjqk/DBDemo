@@ -18,7 +18,7 @@ public class DBTest
 {
     public static void main(String[] args)
     {
-        System.out.println("test github");
+        System.out.println("test github1");
         String resource = "./mybatis-config.xml";
         InputStream inputStream =null;
         try
