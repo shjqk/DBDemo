@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qq.db.UserInfoDao">
+    <select id="countAll" resultType="long">
+        select count(*) c from userinfo;
+    </select>
+    <select id="selectAll" resultType="com.qq.db.UserInfo">
+        select * from userinfo order by  1 desc
+    </select>
+        <select id="insert" parameterType="com.qq.db.UserInfo">
+        insert into userinfo(userName,pwd,datachange_lasttime) values(#{userName},#{pwd},#{datachange_lasttime})
+    </select>
+    <select id="update" parameterType="com.qq.db.UserInfo">
+        update userinfo set pwd=#{pwd},datachange_lasttime=#{datachange_lasttime} where uid=#{uID}
+    </select>
+</mapper> 
